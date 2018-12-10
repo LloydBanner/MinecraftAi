@@ -3,3 +3,4 @@
 -moved to ctypes
 -ctypes allows the functionality I want, but I don't fully understand it
 -using functions I was able to abstract away from the understanding of ctypes by using some code that was on StackOverflow
+-functions for any keyboard press, mouse movement and mouse clicks
