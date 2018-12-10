@@ -1,0 +1,5 @@
+10/12/18
+-tried to use pyautogui for mouse/keyboard inputs, doesn't work with directx
+-moved to ctypes
+-ctypes allows the functionality I want, but I don't fully understand it
+-using functions I was able to abstract away from the understanding of ctypes by using some code that was on StackOverflow
