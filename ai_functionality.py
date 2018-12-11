@@ -1,6 +1,8 @@
 import time
 from input_handling import input_handler
 
+turn_90 = 1230
+
 #opens minecraft window and unpauses game if minecraft icon is fourth on hotbar
 def setup():
     H = input_handler()
@@ -18,8 +20,21 @@ def setup():
     H.mouse_press_left()
     H.mouse_release_left()
     time.sleep(0.05)
-    H.key_press('W')
-    time.sleep(4)
-    H.key_release('W')
-    
+    #move_forward(10, H)
+    right_90(H)
+    time.sleep(1)
+    left_90(H)
+
+def move_forward(n_blocks, handler):
+    t = n_blocks * 0.23 #about 0.23s per block
+    handler.key_press('W')
+    time.sleep(t)
+    handler.key_release('W')
+
+def right_90(handler):
+    handler.move_mouse(turn_90, 0)
+
+def left_90(handler):
+    handler.move_mouse(-turn_90, 0)
+
 setup()

@@ -22,6 +22,7 @@ class input_handler:
         self.move_mouse(x_move, y_move)
 
     def move_mouse(self, x, y):
+        #unit conversion
         x = (x/3.75)
         y = (y/3.65)
         ctypes.windll.user32.mouse_event(self.MOUSE_MOVE, int(x), int(y), 0, 0)
@@ -40,8 +41,6 @@ class input_handler:
 
     def mouse_release_right(self):
         ctypes.windll.user32.mouse_event(self.MOUSE_RIGHTUP, 0, 0, 0, 0)
-
-    SendInput = ctypes.windll.user32.SendInput
 
     def key_press(self, key_string):
         PressKey(key_string)
