@@ -38,7 +38,10 @@ class Input(ctypes.Structure):
 keys = {'W':0x11,
         'A':0x1E,
         'S':0x1F,
-        'D':0x20}
+        'D':0x20,
+        'spc':0x39,
+        '1':0x02,
+        '2':0x03}
 #lloyd's code end
 
 #functions

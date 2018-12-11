@@ -11,3 +11,4 @@
 -using pycutogui to get mouse position instead now
 -can unpause game and move
 -block movement calculator and easy 90 degree turns
+-added basic branch mining functionality
