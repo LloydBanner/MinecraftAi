@@ -1,4 +1,4 @@
-import ctypes
+import ctypes, time
 
 SendInput = ctypes.windll.user32.SendInput
 
@@ -33,15 +33,35 @@ class Input(ctypes.Structure):
     _fields_ = [("type", ctypes.c_ulong),
                 ("ii", Input_I)]
 
+#Lloyd's code start
+#keys that can be pressed
+keys = {'W':0x11,
+        'A':0x1E,
+        'S':0x1F,
+        'D':0x20}
+#lloyd's code end
+
 #functions
-def PressKey(hexKeyCode):
+def PressKey(key_string):
+    #Lloyd's code start
+    for key in keys:
+        if key_string == key:
+            hexKeyCode = keys[key]
+            break
+    #lloyd's code end
     extra = ctypes.c_ulong(0)
     ii_ = Input_I()
     ii_.ki = KeyBdInput( 0, hexKeyCode, 0x0008, 0, ctypes.pointer(extra) )
     x = Input( ctypes.c_ulong(1), ii_ )
     ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
 
-def ReleaseKey(hexKeyCode):
+def ReleaseKey(key_string):
+    #my code
+    for key in keys:
+        if key_string == key:
+            hexKeyCode = keys[key]
+            break
+    #lloyd's code end
     extra = ctypes.c_ulong(0)
     ii_ = Input_I()
     ii_.ki = KeyBdInput( 0, hexKeyCode, 0x0008 | 0x0002, 0, ctypes.pointer(extra) )

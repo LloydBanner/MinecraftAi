@@ -4,3 +4,9 @@
 -ctypes allows the functionality I want, but I don't fully understand it
 -using functions I was able to abstract away from the understanding of ctypes by using some code that was on StackOverflow
 -functions for any keyboard press, mouse movement and mouse clicks
+
+11/12/18
+-keyboard inputs wouldn't work, type error
+-conflict with pyinput and ctypes
+-using pycutogui to get mouse position instead now
+-can unpause game and move forward
