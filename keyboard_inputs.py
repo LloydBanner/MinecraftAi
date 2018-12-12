@@ -39,9 +39,11 @@ keys = {'W':0x11,
         'A':0x1E,
         'S':0x1F,
         'D':0x20,
+        'E':0x12,
         'spc':0x39,
         '1':0x02,
-        '2':0x03}
+        '2':0x03,
+        'Lsft':0x2A}
 #lloyd's code end
 
 #functions

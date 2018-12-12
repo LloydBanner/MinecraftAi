@@ -12,3 +12,7 @@
 -can unpause game and move
 -block movement calculator and easy 90 degree turns
 -added basic branch mining functionality
+
+12/12/18
+-added chest storing after each branch
+-tweeks to improve code
